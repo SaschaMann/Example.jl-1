@@ -1,0 +1,16 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - uses: julia-actions/setup-julia@latest
+    - run: |
+        println("Hello, World!")
+        using InteractiveUtils; versioninfo()
+      shell: bash julia --color=yes --project {0}
