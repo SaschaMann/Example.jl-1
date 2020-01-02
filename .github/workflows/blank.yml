@@ -13,4 +13,4 @@ jobs:
     - run: |
         println("Hello, World!")
         using InteractiveUtils; versioninfo()
-      shell: bash julia --color=yes --project {0}
+      shell: bash -c "julia --color=yes --project {0}"
