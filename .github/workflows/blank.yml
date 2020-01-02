@@ -13,4 +13,5 @@ jobs:
     - run: |
         println("Hello, World!")
         using InteractiveUtils; versioninfo()
+        using Pkg; Pkg.add(PackageSpec(url="https://github.com/JuliaComputing/MKL.jl"));
       shell: bash -c "julia --color=yes --project {0}"
